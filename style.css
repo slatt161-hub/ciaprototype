@@ -1,0 +1,137 @@
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Global Accessibility Improvements */
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--md-sys-color-primary, #811026);
+    border-radius: inherit;
+}
+
+/* GLOBAL DARK MODE OVERRIDES */
+html.dark body,
+html.dark .bg-background {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+html.dark .text-on-background,
+html.dark h1:not(.text-primary-container), 
+html.dark h2:not(.text-primary-container), 
+html.dark h3:not(.text-primary-container), 
+html.dark h4:not(.text-primary-container), 
+html.dark p:not(.text-primary-container):not(.text-primary), 
+html.dark span:not(.text-primary-container):not(.text-primary) {
+    color: #e0e0e0;
+}
+
+html.dark .text-primary { color: #ffb3b5 !important; }
+html.dark .text-primary-container { color: #ffb3b5 !important; }
+html.dark .bg-primary-container { background-color: #5c0b1b !important; color: #ffb3b5 !important; }
+html.dark .bg-secondary-container { background-color: #594400 !important; color: #fecb32 !important; }
+
+/* Surface containers fixes */
+html.dark .bg-surface-container-lowest { background-color: #000000 !important; border-color: #222 !important; color: #e0e0e0 !important; }
+html.dark .bg-surface-container-low { background-color: #1a1c1d !important; border-color: #333 !important; color: #e0e0e0 !important; }
+html.dark .bg-surface-container { background-color: #242424 !important; border-color: #444 !important; color: #e0e0e0 !important; }
+html.dark .bg-surface-container-high { background-color: #2a2a2a !important; border-color: #555 !important; color: #e0e0e0 !important; }
+html.dark .bg-surface-container-highest { background-color: #333333 !important; border-color: #666 !important; color: #e0e0e0 !important; }
+
+html.dark .bg-surface,
+html.dark .bg-white {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Gray backgrounds fixes */
+html.dark .bg-gray-50, html.dark .bg-gray-100 { background-color: #1e1e1e !important; }
+html.dark .bg-gray-200, html.dark .bg-gray-300 { background-color: #2a2a2a !important; }
+
+/* Transparent / Glass / White Variations */
+html.dark .bg-white\/80 { background-color: rgba(30, 30, 30, 0.8) !important; color: #e0e0e0 !important; border-color: #333 !important; }
+html.dark .bg-white\/90 { background-color: rgba(30, 30, 30, 0.9) !important; color: #e0e0e0 !important; border-color: #333 !important; }
+html.dark .bg-white\/95 { background-color: rgba(26, 28, 29, 0.95) !important; color: #e0e0e0 !important; }
+html.dark .bg-white\/10 { background-color: rgba(255, 255, 255, 0.05) !important; color: #e0e0e0 !important; }
+
+html.dark .glass-panel {
+    background: rgba(30, 30, 30, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Borders */
+html.dark .border-outline-variant,
+html.dark .border-gray-200, html.dark .border-gray-100 {
+    border-color: #444 !important;
+}
+
+/* Forms */
+html.dark input, html.dark textarea, html.dark select {
+    background-color: #242424 !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+/* Text elements */
+html.dark .text-on-surface-variant, html.dark .text-gray-600, html.dark .text-gray-700, html.dark .text-gray-800, html.dark .text-black { color: #b0b0b0 !important; }
+html.dark .text-tertiary-fixed-dim { color: #aaaaaa !important; }
+
+/* Hardcoded overrides */
+html.dark .text-\[\#811026\] { color: #ffb3b5 !important; }
+html.dark .text-\[\#2a2a2a\] { color: #e0e0e0 !important; }
+html.dark .border-\[\#811026\] { border-color: #ffb3b5 !important; }
+html.dark .bg-\[\#811026\] { background-color: #ffb3b5 !important; color: #1a1c1d !important; }
+
+/* Gradient Overrides for Dark Mode */
+html.dark .from-background {
+    --tw-gradient-from: #000000 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(0, 0, 0, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+html.dark .via-background\/90 {
+    --tw-gradient-to: rgba(0, 0, 0, 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(0, 0, 0, 0.95) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+html.dark .to-background {
+    --tw-gradient-to: #000000 var(--tw-gradient-to-position);
+}
+html.dark .from-surface {
+    --tw-gradient-from: #1e1e1e var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(30, 30, 30, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+html.dark .from-surface\/80 {
+    --tw-gradient-from: rgba(0, 0, 0, 0.95) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(0, 0, 0, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+html.dark .via-surface\/60 {
+    --tw-gradient-to: rgba(0, 0, 0, 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(0, 0, 0, 0.85) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+html.dark .from-surface-container-low {
+    --tw-gradient-from: #1a1c1d var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(26, 28, 29, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+html.dark .via-surface\/90 {
+    --tw-gradient-to: rgba(30, 30, 30, 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(30, 30, 30, 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+html.dark .to-surface {
+    --tw-gradient-to: #1e1e1e var(--tw-gradient-to-position);
+}
+html, body, div, span, p, a, h1, h2, h3, h4, h5, h6, section, nav, header, footer, button, input, textarea, select, img {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+/* Surface Opacity Overrides */
+html.dark .bg-surface\/80 { background-color: rgba(30, 30, 30, 0.8) !important; }
+html.dark .bg-surface\/90 { background-color: rgba(30, 30, 30, 0.9) !important; }
